@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Baby Cry Analyzer</title>
+<link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>👶 Baby Cry Analyzer</h1>
+
+<input type="file" id="audio">
+
+<textarea id="context" placeholder="Optional context (last feed, diaper change etc)"></textarea>
+
+<button onclick="analyze()">Analyze Cry</button>
+
+<div id="result"></div>
+
+<div id="correction" style="display:none">
+
+<p>Was the prediction correct?</p>
+
+<button onclick="correct(true)">Yes</button>
+<button onclick="showOptions()">No</button>
+
+<select id="label" style="display:none">
+<option>hungry</option>
+<option>tired</option>
+<option>gas</option>
+<option>pain</option>
+<option>diaper</option>
+<option>attention</option>
+</select>
+
+<button onclick="correct(false)">Submit</button>
+
+</div>
+
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+
+</html>
